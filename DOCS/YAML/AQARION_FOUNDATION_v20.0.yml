@@ -1,0 +1,254 @@
+foundation:
+  schema_version: "20.0"
+
+  identity:
+    name: AQARION Verification Architecture
+    purpose:
+      "Certificate-first verification framework for finite and structured dynamical systems"
+
+  core_principle:
+
+    AQ-PRINCIPLE-001:
+      title: Object Completeness Before Invariant Claims
+
+      statement: >
+        No invariant, quotient, spectral property, protection claim,
+        or geometric classification may be evaluated until the
+        underlying mathematical object is completely specified.
+
+      examples:
+
+        Kaprekar:
+          incomplete_object:
+            representative_independence_missing
+
+          false_result:
+            invalid_quotient_interpretation
+
+
+        Steane:
+          incomplete_object:
+            kraus_channel_incomplete
+
+          false_result:
+            artificial_DFS_detection
+
+
+      status:
+        foundational
+
+
+  verification_pipeline:
+
+    stages:
+
+      - id: V0
+        name: Object Definition
+        requirement:
+          complete mathematical specification
+
+      - id: V1
+        name: Assumption Registry
+        requirement:
+          explicit hypotheses
+
+      - id: V2
+        name: Proof Obligation
+        requirement:
+          claim must have derivation path
+
+      - id: V3
+        name: Computational Verification
+        requirement:
+          reproducible execution
+
+      - id: V4
+        name: Certificate Generation
+        requirement:
+          structured evidence object
+
+      - id: V5
+        name: Audit
+        requirement:
+          negative claim firewall
+
+
+  domains:
+
+    finite_dynamics:
+
+      examples:
+
+        - id: AQ-KAP-001
+          name: Kaprekar Functional Graph
+          classification:
+            exhaustive_finite
+
+          verification:
+            enumeration
+
+
+    infinite_discrete:
+
+      examples:
+
+        - id: AQ-FIB-001
+          name: Fibonacci Recurrence
+
+          classification:
+            infinite_recurrence
+
+          verification:
+            symbolic_limit
+
+
+    infinite_continuous:
+
+      examples:
+
+        - id: AQ-MAN-001
+          name: Mandelbrot Dynamics
+
+          classification:
+            infinite_parameter_system
+
+          verification:
+            approximation_certificate
+
+
+    quantum:
+
+      examples:
+
+        - id: AQ-STEANE-001
+          name: Steane Stabilizer Verification
+
+          classification:
+            quantum_error_correction
+
+          verification:
+            CPTP_channel_analysis
+
+
+  certificate_inheritance:
+
+    rules:
+
+      - id: CERT-001
+        rule:
+          "Evidence maturity cannot exceed object maturity"
+
+      - id: CERT-002
+        rule:
+          "Computational evidence cannot replace missing definitions"
+
+      - id: CERT-003
+        rule:
+          "Observed behavior cannot be promoted to theorem without proof obligation"
+
+
+  benchmark_registry:
+
+
+    AQ-KAP-001:
+
+      role:
+        finite_validation_anchor
+
+      verified:
+
+        - functional_graph
+        - quotient_structure
+        - attractor_analysis
+
+
+      corrections:
+
+        - basin_indicator_not_left_eigenvector
+
+
+    AQ-FIB-001:
+
+      role:
+        infinite_discrete_validation
+
+      targets:
+
+        - recurrence
+        - matrix_operator_form
+        - asymptotic_limits
+
+
+    AQ-MAN-001:
+
+      role:
+        infinite_continuous_validation
+
+      targets:
+
+        - escape_analysis
+        - approximation_bounds
+        - orbit_classification
+
+
+    AQ-STEANE-001:
+
+      role:
+        quantum_validation
+
+      targets:
+
+        - stabilizer_definition
+        - channel_completeness
+        - leakage_analysis
+
+
+
+  negative_claim_firewall:
+
+    purpose:
+      "Prevent unsupported invariant classification"
+
+    enforced:
+
+      - AQ-NF-006:
+          reject:
+            "Transient basin indicators are invariant measures"
+
+          reason:
+            "lambda=1 left eigenvectors live on recurrent components"
+
+
+      - AQ-QNF-001:
+          reject:
+            "Incomplete Kraus operators define physical noise channels"
+
+          reason:
+            "missing Kraus branches alter the evolution map"
+
+
+      - AQ-MAN-NF-001:
+          reject:
+            "Finite render equals proof of complete Mandelbrot boundary"
+
+          reason:
+            "approximation requires error certification"
+
+
+  release:
+
+    version:
+      AQARION-v20.0
+
+    status:
+      architecture_transition
+
+    next_artifacts:
+
+      - FOUNDATIONS.yml
+      - FUNCTIONAL_GRAPH.yml
+      - KOOPMAN_FRAMEWORK.yml
+      - AQ-QDEF-001.yml
+      - AQ-QCHAN-001.yml
+      - AQ-MAN-DEF-001.yml
+      - CERTIFICATE_SCHEMA.yml
