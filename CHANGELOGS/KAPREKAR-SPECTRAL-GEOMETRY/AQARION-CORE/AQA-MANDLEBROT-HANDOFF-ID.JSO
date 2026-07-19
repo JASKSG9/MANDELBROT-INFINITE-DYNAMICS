@@ -1,0 +1,30 @@
+{
+  "origin_id": "OG-AQARION-MANDELBROT-001",
+  "system": {
+    "name": "Mandelbrot_Quadratic_Family",
+    "type": "complex_parameter_dynamics",
+    "map": "z -> z^2 + c"
+  },
+  "research_question": "Can finite observations preserve infinite dynamical structure?",
+  "aqarion_target": {
+    "operator": "D_Pi=(I-Pi)K Pi",
+    "hypothesis": "Push/Pull observational verification"
+  },
+  "observation_model": {
+    "domain": "complex_plane_grid",
+    "resolution": "finite_sampling",
+    "projection": "pixel_partition"
+  },
+  "expected_behavior": [
+    "FINITE_APPROXIMATION",
+    "NONZERO_OBSERVATION_DEFECT",
+    "BOUNDARY_COMPLEXITY",
+    "SCALE_DEPENDENCE"
+  ],
+  "classification": [
+    "FRACTAL",
+    "APPROXIMATE_QUOTIENT",
+    "INFINITE_LIMIT_OBJECT",
+    "DEFECT_DOMINATED"
+  ]
+}
