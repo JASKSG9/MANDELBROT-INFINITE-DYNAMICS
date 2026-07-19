@@ -1,0 +1,55 @@
+{
+  "ASF_version": "1.0",
+  "height_definition": {
+    "cycle_nodes": {
+      "included": false,
+      "height": 0
+    },
+    "transient_distance": {
+      "minimum": 1,
+      "maximum": "H"
+    },
+    "indexing": "zero_based",
+    "convention": "distance_to_cycle",
+    "note": "H = max height, cycle nodes height 0 excluded from transient count. For Kaprekar D4, H=7 includes transient levels 1..7, cycle nodes 0. If cycle excluded from count, some sources report H=6."
+  },
+  "branching": {
+    "layer_entropy": "max_t log L(t)/t  (finite-time)",
+    "finite_beta_entropy": "max_t log beta(t)/t  (finite-time pseudo-entropy)",
+    "asymptotic_branch_entropy": "limsup_{t->inf} (1/t) log beta(t) =0 for finite X, nontrivial only for families"
+  },
+  "identity": {
+    "system": "",
+    "origin": "",
+    "state_type": ""
+  },
+  "space": {
+    "size": 0,
+    "finite": true
+  },
+  "dynamics": {
+    "map_type": "functional_graph",
+    "cycles": {
+      "count": 0,
+      "sizes": []
+    },
+    "height": {
+      "value": 0,
+      "convention": "distance_to_cycle"
+    }
+  },
+  "geometry": {
+    "levels": [],
+    "inverse_branching": {}
+  },
+  "compression": {
+    "quotient_size": 0,
+    "ratio": 0
+  },
+  "closure": {
+    "observable": "",
+    "D_pi": "UNKNOWN",
+    "status": ""
+  },
+  "classification": []
+}
