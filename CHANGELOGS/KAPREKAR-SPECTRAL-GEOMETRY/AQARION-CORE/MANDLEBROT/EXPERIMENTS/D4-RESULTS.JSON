@@ -1,0 +1,5 @@
+{
+ "system":"Kaprekar_D4",
+ "classification":["FINITE","FUNCTIONAL_GRAPH","HIGH_COMPRESSION","LOW_DEPTH","EXACT_QUOTIENT"],
+ "compression":{"quotient_size":54,"ratio":0.0054}
+}
