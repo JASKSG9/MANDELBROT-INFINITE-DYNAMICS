@@ -1,5 +1,391 @@
+
 {
  "system":"Kaprekar_D4",
  "classification":["FINITE","FUNCTIONAL_GRAPH","HIGH_COMPRESSION","LOW_DEPTH","EXACT_QUOTIENT"],
  "compression":{"quotient_size":54,"ratio":0.0054}
 }
+
+{
+  "description": "AQA(T) invariant tuples for Kaprekar family and benchmarks",
+  "engine": "AQA_Engine_fast_v13",
+  "generated": "2026-07-18T00:00:00Z",
+  "version": "J18-2026-07-18",
+  "invariants": {
+    "AQA_tuple": [
+      "N",
+      "num_cycles",
+      "height_spectrum",
+      "max_indegree",
+      "beta",
+      "h_layer",
+      "h_branch",
+      "Q",
+      "C"
+    ],
+    "closure_mapping": {
+      "D_i rank": "L(i+1)",
+      "V0": "span of cycle indicators",
+      "Vn": "span of nodes with height <= n",
+      "beta(t)": "sum_{i=1}^t L(i)",
+      "c": "Q = |{(h, root)}| = sum_g",
+      "delta": "max_height = H",
+      "g_i": "L(i) = level profile"
+    }
+  },
+  "systems": [
+    {
+      "system": "Kaprekar_D3",
+      "N": 1000,
+      "num_cycles": 2,
+      "cycle_nodes": 2,
+      "transient_nodes": 998,
+      "max_height": 6,
+      "height_spectrum": {
+        "0": 2,
+        "1": 158,
+        "2": 144,
+        "3": 270,
+        "4": 222,
+        "5": 150,
+        "6": 54
+      },
+      "max_indegree": 150,
+      "Q": 9,
+      "quotient_density": 0.009,
+      "compression_law": "high",
+      "h_branch": 5.0626,
+      "h_layer": 5.0626,
+      "minimal_polynomial": "x^6(x-1)",
+      "nilpotent_index": 7
+    },
+    {
+      "system": "Kaprekar_D4",
+      "N": 10000,
+      "num_cycles": 2,
+      "cycle_nodes": 2,
+      "transient_nodes": 9998,
+      "max_height": 7,
+      "height_spectrum": {
+        "0": 2,
+        "1": 392,
+        "2": 576,
+        "3": 2400,
+        "4": 1272,
+        "5": 1518,
+        "6": 1656,
+        "7": 2184
+      },
+      "max_indegree": 480,
+      "Q": 10,
+      "quotient_density": 0.001,
+      "compression_law": "high",
+      "h_branch": 5.9713,
+      "h_layer": 5.9713,
+      "minimal_polynomial": "x^7(x-1)",
+      "nilpotent_index": 8,
+      "note": "FOQDS 55-state quotient corresponds to Q=10 observable (height,root) but refines to 55 via trace equivalence"
+    },
+    {
+      "system": "Kaprekar_D5",
+      "N": 100000,
+      "num_cycles": 4,
+      "cycle_nodes": 11,
+      "transient_nodes": 99989,
+      "max_height": 6,
+      "height_spectrum": {
+        "0": 11,
+        "1": 31039,
+        "2": 18330,
+        "3": 21000,
+        "4": 17580,
+        "5": 8450,
+        "6": 3590
+      },
+      "max_indegree": 4260,
+      "Q": 42,
+      "quotient_density": 0.00042,
+      "compression_law": "ultra_high",
+      "h_branch": 10.343,
+      "h_layer": 10.343
+    },
+    {
+      "system": "Kaprekar_D6",
+      "N": 1000000,
+      "num_cycles": 4,
+      "cycle_nodes": 10,
+      "transient_nodes": 999990,
+      "max_height": 13,
+      "height_spectrum": {
+        "0": 10,
+        "1": 92550,
+        "2": 158400,
+        "3": 134520,
+        "4": 81240,
+        "5": 98308,
+        "6": 86820,
+        "7": 76440,
+        "8": 91760,
+        "9": 70428,
+        "10": 48836,
+        "11": 20428,
+        "12": 39600,
+        "13": 660
+      },
+      "max_indegree": 19080,
+      "Q": 60,
+      "quotient_density": 6e-05,
+      "compression_law": "ultra_high",
+      "h_branch": 11.4355,
+      "h_layer": 11.4355,
+      "nilpotent_index": 14
+    }
+  ],
+  "theorem_AQ_039_corrected": {
+    "finite_graph": "For finite X, limsup_{t->inf} (1/t) log beta(t) = 0. Nontrivial invariant is finite-time h_branch^finite = max_t log beta(t)/t and h_layer = max_t log L(t)/t",
+    "infinite_graph": "h_branch>0 iff transient forest has exponential growth, i.e., contains regular b-ary subtree of infinite height, then h_branch >= log b",
+    "kaprekar_family": "C_d = Q_d / 10^d = O(d^2 / 10^d) -> ultra_high compression, H_d grows slowly (6,7,6,13), level sizes subexponential in t"
+  }
+}
+{
+  "system": "Mandelbrot_grid",
+  "origin_id": "OG-AQARION-MANDELBROT-001",
+  "samples": 640000,
+  "projection_defect": {
+    "D_pi_estimate": 11,
+    "status": "MEASURED",
+    "scale_dependence": [
+      {
+        "resolution": 50,
+        "samples": 2500,
+        "defect": 10,
+        "defect_ratio": 0.004,
+        "collision_examples": [
+          {
+            "obs": [
+              "ESCAPE",
+              0
+            ],
+            "future_branching": 2
+          },
+          {
+            "obs": [
+              "BOUND",
+              100
+            ],
+            "future_branching": 7
+          },
+          {
+            "obs": [
+              "ESCAPE",
+              4
+            ],
+            "future_branching": 4
+          }
+        ]
+      },
+      {
+        "resolution": 100,
+        "samples": 10000,
+        "defect": 10,
+        "defect_ratio": 0.001,
+        "collision_examples": [
+          {
+            "obs": [
+              "ESCAPE",
+              0
+            ],
+            "future_branching": 2
+          },
+          {
+            "obs": [
+              "BOUND",
+              100
+            ],
+            "future_branching": 10
+          },
+          {
+            "obs": [
+              "ESCAPE",
+              1
+            ],
+            "future_branching": 5
+          }
+        ]
+      },
+      {
+        "resolution": 200,
+        "samples": 40000,
+        "defect": 11,
+        "defect_ratio": 0.000275,
+        "collision_examples": [
+          {
+            "obs": [
+              "ESCAPE",
+              0
+            ],
+            "future_branching": 2
+          },
+          {
+            "obs": [
+              "BOUND",
+              100
+            ],
+            "future_branching": 11
+          },
+          {
+            "obs": [
+              "ESCAPE",
+              1
+            ],
+            "future_branching": 6
+          }
+        ]
+      },
+      {
+        "resolution": 400,
+        "samples": 160000,
+        "defect": 11,
+        "defect_ratio": 6.875e-05,
+        "collision_examples": [
+          {
+            "obs": [
+              "ESCAPE",
+              0
+            ],
+            "future_branching": 2
+          },
+          {
+            "obs": [
+              "BOUND",
+              100
+            ],
+            "future_branching": 11
+          },
+          {
+            "obs": [
+              "ESCAPE",
+              1
+            ],
+            "future_branching": 10
+          }
+        ]
+      },
+      {
+        "resolution": 800,
+        "samples": 640000,
+        "defect": 11,
+        "defect_ratio": 1.71875e-05,
+        "collision_examples": [
+          {
+            "obs": [
+              "ESCAPE",
+              0
+            ],
+            "future_branching": 2
+          },
+          {
+            "obs": [
+              "BOUND",
+              100
+            ],
+            "future_branching": 11
+          },
+          {
+            "obs": [
+              "ESCAPE",
+              1
+            ],
+            "future_branching": 11
+          }
+        ]
+      }
+    ],
+    "epsilon_r": [
+      {
+        "resolution": 50,
+        "epsilon": 0.004
+      },
+      {
+        "resolution": 100,
+        "epsilon": 0.001
+      },
+      {
+        "resolution": 200,
+        "epsilon": 0.000275
+      },
+      {
+        "resolution": 400,
+        "epsilon": 6.875e-05
+      },
+      {
+        "resolution": 800,
+        "epsilon": 1.71875e-05
+      }
+    ]
+  },
+  "push_pull_VV": {
+    "pull_verification": "Does observation preserve behavior? Test same pixel class -> same future class",
+    "push_verification": "If reconstruct hidden states from observation, where does error appear?",
+    "leakage_horizon": [
+      {
+        "n": 1,
+        "defect": 11,
+        "defect_ratio": 0.000275
+      },
+      {
+        "n": 2,
+        "defect": 11,
+        "defect_ratio": 0.000275
+      },
+      {
+        "n": 10,
+        "defect": 11,
+        "defect_ratio": 0.000275
+      },
+      {
+        "n": 100,
+        "defect": 11,
+        "defect_ratio": 0.000275
+      }
+    ]
+  },
+  "interpretation": {
+    "expected": "D_Pi != 0, FINITE_APPROXIMATION, NONZERO_OBSERVATION_DEFECT, BOUNDARY_COMPLEXITY",
+    "meaning": "Observation partition is not dynamically closed"
+  },
+  "verification": {
+    "type": "computational",
+    "status": "PASS"
+  }
+}
+{
+  "origin_id": "OG-AQARION-MANDELBROT-001",
+  "system": {
+    "name": "Mandelbrot_Quadratic_Family",
+    "type": "complex_parameter_dynamics",
+    "map": "z -> z^2 + c"
+  },
+  "research_question": "Can finite observations preserve infinite dynamical structure?",
+  "aqarion_target": {
+    "operator": "D_Pi=(I-Pi)K Pi",
+    "hypothesis": "Push/Pull observational verification"
+  },
+  "observation_model": {
+    "domain": "complex_plane_grid",
+    "resolution": "finite_sampling",
+    "projection": "pixel_partition"
+  },
+  "expected_behavior": [
+    "FINITE_APPROXIMATION",
+    "NONZERO_OBSERVATION_DEFECT",
+    "BOUNDARY_COMPLEXITY",
+    "SCALE_DEPENDENCE"
+  ],
+  "classification": [
+    "FRACTAL",
+    "APPROXIMATE_QUOTIENT",
+    "INFINITE_LIMIT_OBJECT",
+    "DEFECT_DOMINATED"
+  ]
+}
+
