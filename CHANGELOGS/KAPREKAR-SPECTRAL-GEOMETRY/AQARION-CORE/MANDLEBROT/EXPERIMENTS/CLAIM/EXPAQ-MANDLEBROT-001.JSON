@@ -1,0 +1,23 @@
+{
+  "EXP-AQ-MANDELBROT-001": {
+    "type": "infinite",
+    "state": "ACTIVE",
+    "evidence": "NUMERICAL",
+    "artifact": "mandelbrot_escape.csv",
+    "claim": "Escape-time bins yield low-rank defect near boundary region X."
+  },
+  "EXP-AQ-KAPREKAR-002": {
+    "type": "finite",
+    "state": "CERTIFIED",
+    "evidence": "EXACT_PROOF + COMPUTATIONAL",
+    "artifact": "kaprekar_profile.csv",
+    "claim": "τ-level partition is exact (D_Π=0) for d=4 quotient."
+  },
+  "EXP-AQ-AFFINE-003": {
+    "type": "affine",
+    "state": "ACTIVE",
+    "evidence": "NUMERICAL",
+    "artifact": "affine_trajectories_summary.csv",
+    "claim": "Fibonacci-swept affine family exhibits structured-leakage corridors at k ∈ {...}."
+  }
+}
